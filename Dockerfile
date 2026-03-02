@@ -27,7 +27,7 @@ RUN apk add --no-cache pcre && \
 COPY --from=builder /usr/local /usr/local
 
 # Copy application code
-COPY ./app-code .
+COPY src .
 
 # Set proper ownership for the app directory
 RUN chown -R roboshop:roboshop /payment
